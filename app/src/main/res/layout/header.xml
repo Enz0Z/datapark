@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="200dp"
     android:background="@drawable/enc"
+    android:backgroundTint="#6A6864"
+    android:backgroundTintMode="multiply"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="20dp">
@@ -13,7 +15,7 @@
         android:text="PATATAMASCARPONE"
         android:textColor="#fff"
         android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,6 +23,6 @@
         android:text="huehuehue"
         android:textColor="#fff"
         android:textSize="10dp"
-        android:textStyle="bold" />
+        android:textStyle="italic" />
 
 </LinearLayout>

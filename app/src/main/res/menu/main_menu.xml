@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-
+        <item android:id="@+id/test0"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="TEST"/>
     </group>
     <item android:title="TEST">
         <menu>
             <group android:checkableBehavior="single">
                 <item android:id="@+id/test1"
                     android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="gallery"
-                />
+                    android:title="TEST"/>
                 <item android:id="@+id/test2"
                     android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="gallery"
-                    />
+                    android:title="TEST"/>
             </group>
         </menu>
     </item>
@@ -22,12 +22,10 @@
             <group android:checkableBehavior="single">
                 <item android:id="@+id/test3"
                     android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="TEST"
-                    />
+                    android:title="TEST"/>
                 <item android:id="@+id/test4"
                     android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="TEST"
-                    />
+                    android:title="TEST"/>
             </group>
         </menu>
     </item>
