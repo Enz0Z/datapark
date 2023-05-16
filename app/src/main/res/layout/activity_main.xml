@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/logimg"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
+        android:background="#8D000000"
         android:gravity="center"
-        android:background="#8D000000">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
             android:layout_width="156dp"
@@ -62,21 +62,22 @@
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btncolor"
+            android:onClick="changeAct"
             android:text="Sign in"
             android:textStyle="bold|italic" />
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#3fff"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:background="#3fff" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You have not an account yet? Register here"
             android:layout_marginTop="10dp"
-            android:textColor="#FFFBF8"/>
+            android:text="You have not an account yet? Register here"
+            android:textColor="#FFFBF8" />
 
         <TextView
             android:layout_width="wrap_content"

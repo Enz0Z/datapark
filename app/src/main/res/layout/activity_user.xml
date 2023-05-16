@@ -7,7 +7,7 @@
     android:background="@drawable/logimg"
     android:backgroundTint="#49545E"
     android:backgroundTintMode="multiply"
-    tools:context=".ProfileActivity">
+    tools:context=".UserActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/kirbyProfile" />
+                        android:src="@drawable/kirby"/>
 
                     <TextView
                         android:id="@+id/textView"
@@ -93,6 +93,33 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <Button
+                                android:id="@+id/button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn"
+                                android:text="ADD CAR"
+                                android:textStyle="bold|italic" />
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn"
+                                android:text="DEL CAR" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:orientation="horizontal">
 
@@ -103,7 +130,7 @@
                                 android:layout_weight="1"
                                 android:text="TESTTITLE:"
                                 android:textAlignment="center"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:textSize="12dp"
                                 android:textStyle="bold|italic" />
 
@@ -114,61 +141,27 @@
                                 android:layout_weight="1"
                                 android:text="Test content"
                                 android:textAlignment="center"
-                                android:textColor="#000000"
+                                android:textColor="@color/white"
                                 android:textSize="12dp"
                                 android:textStyle="italic" />
 
                         </LinearLayout>
 
-                        <LinearLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/listViewLayout"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
 
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_margin="10dp"
-                                android:layout_weight="0.333333"
-                                android:background="@drawable/item_panel_background"
-                                android:elevation="5dp"
-                                android:orientation="vertical">
-
-                                <androidx.constraintlayout.widget.ConstraintLayout
-                                    android:layout_width="60dp"
-                                    android:layout_height="60dp"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginTop="12dp"
-                                    android:background="@drawable/circle_item">
-
-                                    <ImageView
-                                        android:id="@+id/imageView3"
-                                        android:layout_width="64dp"
-                                        android:layout_height="60dp"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-                                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                                <TextView
-                                    android:id="@+id/textView3"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="8dp"
-                                    android:layout_marginTop="3dp"
-                                    android:layout_weight="1"
-                                    android:text="Test option 1"
-                                    android:textAlignment="center"
-                                    android:textColor="#000000"
-                                    android:textSize="13dp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                        </LinearLayout>
+                            <ListView
+                                android:id="@+id/ListView"
+                                android:layout_width="344dp"
+                                android:layout_height="341dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
