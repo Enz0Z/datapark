@@ -8,8 +8,142 @@
     tools:context=".FormActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#8D000000"
-        android:orientation="vertical"></LinearLayout>
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Introduce los datos de tu vehiculo"
+            android:textColor="#ffff"
+            android:textSize="16dp"
+            android:textStyle="bold|italic"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Modelo"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Marca"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Matricula"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Tipo de carburante"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Tamaño del tanque"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Kilometraje actual"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Potencia"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="Nota"
+            android:paddingLeft="15dp"
+            android:textColorHint="#40FFFFFF"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clean"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btncolor"
+                android:onClick="changeAct"
+                android:text="Clean"
+                android:textStyle="bold|italic"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="125dp"
+                tools:layout_editor_absoluteX="155dp"
+                tools:layout_editor_absoluteY="546dp" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btncolor"
+                android:onClick="changeAct"
+                android:text="Save"
+                android:textStyle="bold|italic"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="125dp"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="546dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
