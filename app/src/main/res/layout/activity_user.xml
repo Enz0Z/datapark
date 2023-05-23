@@ -40,7 +40,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageProfile"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_marginTop="32dp"
@@ -50,30 +50,30 @@
                         android:src="@drawable/kirby"/>
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/userProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="KIRBY MASCARPONE"
+                        android:text="@string/sampleName"
                         android:textColor="#ffff"
                         android:textSize="16dp"
                         android:textStyle="bold|italic"
 
-                        app:layout_constraintEnd_toEndOf="@+id/imageView"
-                        app:layout_constraintStart_toStartOf="@+id/imageView"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                        app:layout_constraintEnd_toEndOf="@+id/imageProfile"
+                        app:layout_constraintStart_toStartOf="@+id/imageProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/mailProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="redonditoycuqui@soymonisimo.com"
+                        android:text="@string/sampleMail"
                         android:textColor="#ffff"
                         android:textSize="10dp"
                         android:textStyle="italic"
-                        app:layout_constraintEnd_toEndOf="@+id/textView"
-                        app:layout_constraintStart_toStartOf="@+id/textView"
-                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+                        app:layout_constraintEnd_toEndOf="@+id/userProfile"
+                        app:layout_constraintStart_toStartOf="@+id/userProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/userProfile" />
 
                     <LinearLayout
                         android:layout_width="352dp"
@@ -88,22 +88,87 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView2">
+                        app:layout_constraintTop_toBottomOf="@+id/mailProfile">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                            android:gravity="center"
                             android:padding="10dp">
 
-                            <Button
-                                android:id="@+id/button"
-                                android:layout_width="match_parent"
+                            <TextView
+                                android:id="@+id/profileSettingsTextView"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="5dp"
+                                android:text="@string/profileSettings"
+                                android:textColor="#ffff"
+                                android:textSize="10dp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toEndOf="@+id/textView"
+                                app:layout_constraintStart_toStartOf="@+id/textView"
+                                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                            <EditText
+                                android:id="@+id/editNameProfileField"
+                                android:layout_width="300dp"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/btn"
+                                android:hint="@string/editName"
+                                android:paddingLeft="15dp"
+                                android:textColorHint="#BDBDBD"
+                                android:textStyle="italic" />
+
+                            <EditText
+                                android:id="@+id/editMailProfileField"
+                                android:layout_width="300dp"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/btn"
+                                android:hint="@string/editMail"
+                                android:paddingLeft="15dp"
+                                android:textColorHint="#BDBDBD"
+                                android:textStyle="italic" />
+
+                            <Button
+                                android:id="@+id/updateProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/btn"
-                                android:text="ADD NEW CAR"
+                                android:text="@string/update"
+                                android:textStyle="bold|italic" />
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="#3fff" />
+
+                            <TextView
+                                android:id="@+id/carManagerTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/carManager"
+                                android:textColor="#ffff"
+                                android:textSize="10dp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toEndOf="@+id/textView"
+                                app:layout_constraintStart_toStartOf="@+id/textView"
+                                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+                            <Button
+                                android:id="@+id/insertCarButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn"
+                                android:text="@string/insertCar"
                                 android:textStyle="bold|italic" />
 
                         </LinearLayout>

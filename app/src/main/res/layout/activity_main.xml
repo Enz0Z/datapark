@@ -22,37 +22,39 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/circle"
             android:gravity="center"
-            android:text="Logo Datapark Here!"
+            android:text="@string/app_name"
             android:textColor="#ffff"
             android:textStyle="bold|italic"></TextView>
 
         <EditText
+            android:id="@+id/userField"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btn"
-            android:hint="Username"
+            android:hint="@string/user"
             android:paddingLeft="15dp"
-            android:textColorHint="#40FFFFFF"
+            android:textColorHint="#BDBDBD"
             android:textStyle="italic" />
 
         <EditText
+            android:id="@+id/passField"
             android:layout_width="300dp"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btn"
-            android:hint="Password"
+            android:hint="@string/pass"
             android:paddingLeft="15dp"
-            android:textColorHint="#40FFFFFF"
+            android:textColorHint="#BDBDBD"
             android:textStyle="italic" />
 
         <CheckBox
+            android:id="@+id/keepmesigned"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:buttonTint="#FFFBF8"
-            android:hint="#ffffff"
-            android:text="Keep me sign in"
+            android:text="@string/keepMe"
             android:textColor="#ffff"
             android:textStyle="italic" />
 
@@ -63,7 +65,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/btncolor"
             android:onClick="changeAct"
-            android:text="Sign in"
+            android:text="@string/signin"
             android:textStyle="bold|italic" />
 
         <View
@@ -73,17 +75,19 @@
             android:background="#3fff" />
 
         <TextView
+            android:id="@+id/registerHere"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="You have not an account yet? Register here"
+            android:text="@string/registerhere"
             android:textColor="#FFFBF8" />
 
         <TextView
+            android:id="@+id/forgetPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Forget Pass?"
+            android:text="@string/forpass"
             android:textColor="#FFFBF8"
             android:textStyle="italic" />
 
