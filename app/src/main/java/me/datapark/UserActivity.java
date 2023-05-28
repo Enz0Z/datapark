@@ -21,12 +21,13 @@ public class UserActivity extends AppCompatActivity implements AdapterView.OnIte
         items = new ArrayList<>();
         items.add("New Car");
         items.add("New Car");
-        items.add("New Car");items.add("New Car");
+        items.add("New Car");
+        items.add("New Car");
 
 
         try{
-            miLista = findViewById(R.id.ListView);
-            ArrayAdapter<String> miAdapatador = new ArrayAdapter<>(this,R.layout.item_cars, items);
+            miLista = (ListView) findViewById(R.id.ListView);
+            ArrayAdapter<String> miAdapatador = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
             //puente entre contenedor y datos
             miLista.setAdapter(miAdapatador);
             miLista.setOnItemClickListener(this);
