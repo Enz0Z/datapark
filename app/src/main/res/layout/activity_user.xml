@@ -92,104 +92,115 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/mailProfile">
 
-                        <LinearLayout
+                        <ScrollView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            android:padding="10dp">
+                            android:layout_height="match_parent">
 
-                            <TextView
-                                android:id="@+id/profileSettingsTextView"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/profileSettings"
-                                android:textColor="#ffff"
-                                android:textSize="10dp"
-                                android:textStyle="italic"
-                                app:layout_constraintEnd_toEndOf="@+id/textView"
-                                app:layout_constraintStart_toStartOf="@+id/textView"
-                                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                            <EditText
-                                android:id="@+id/editNameProfileField"
-                                android:layout_width="300dp"
-                                android:layout_height="48dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btn"
-                                android:hint="@string/editName"
-                                android:paddingLeft="15dp"
-                                android:textColorHint="#BDBDBD"
-                                android:textStyle="italic" />
-
-                            <EditText
-                                android:id="@+id/editMailProfileField"
-                                android:layout_width="300dp"
-                                android:layout_height="48dp"
-                                android:layout_marginTop="10dp"
-                                android:background="@drawable/btn"
-                                android:hint="@string/editMail"
-                                android:paddingLeft="15dp"
-                                android:textColorHint="#BDBDBD"
-                                android:textStyle="italic" />
-
-                            <Button
-                                android:id="@+id/updateProfile"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_weight="1"
-                                android:background="@drawable/btn"
-                                android:text="@string/update"
-                                android:textStyle="bold|italic" />
-
-                            <View
-                                android:layout_width="fill_parent"
-                                android:layout_height="2dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:background="#3fff" />
-
-                            <TextView
-                                android:id="@+id/carManagerTextView"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/carManager"
-                                android:textColor="#ffff"
-                                android:textSize="10dp"
-                                android:textStyle="italic"
-                                app:layout_constraintEnd_toEndOf="@+id/textView"
-                                app:layout_constraintStart_toStartOf="@+id/textView"
-                                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-
-                            <Button
-                                android:id="@+id/insertCarButton"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_weight="1"
-                                android:background="@drawable/btn"
-                                android:text="@string/insertCar"
-                                android:textStyle="bold|italic" />
+                                android:orientation="vertical" >
 
-                        </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/listViewLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                                    <TextView
+                                        android:id="@+id/profileSettingsTextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/profileSettings"
+                                        android:textColor="#ffff"
+                                        android:textSize="10dp"
+                                        android:textStyle="italic"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView"
+                                        app:layout_constraintStart_toStartOf="@+id/textView"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                            <ListView
-                                android:id="@+id/ListView"
-                                android:layout_width="344dp"
-                                android:layout_height="341dp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    <EditText
+                                        android:id="@+id/editNameProfileField"
+                                        android:layout_width="300dp"
+                                        android:layout_height="48dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/btn"
+                                        android:hint="@string/editName"
+                                        android:paddingLeft="15dp"
+                                        android:textColorHint="#BDBDBD"
+                                        android:textStyle="italic" />
+
+                                    <EditText
+                                        android:id="@+id/editMailProfileField"
+                                        android:layout_width="300dp"
+                                        android:layout_height="48dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/btn"
+                                        android:hint="@string/editMail"
+                                        android:paddingLeft="15dp"
+                                        android:textColorHint="#BDBDBD"
+                                        android:textStyle="italic" />
+
+                                    <Button
+                                        android:id="@+id/updateProfile"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btncolor"
+                                        android:text="@string/update"
+                                        android:textStyle="bold|italic" />
+
+                                    <View
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:background="#3fff" />
+
+                                    <TextView
+                                        android:id="@+id/carManagerTextView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/carManager"
+                                        android:textColor="#ffff"
+                                        android:textSize="10dp"
+                                        android:textStyle="italic"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView"
+                                        app:layout_constraintStart_toStartOf="@+id/textView"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+                                    <Button
+                                        android:id="@+id/insertCarButton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btncolor"
+                                        android:text="@string/insertCar"
+                                        android:textStyle="bold|italic" />
+
+                                </LinearLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/listViewLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <ListView
+                                        android:id="@+id/ListView"
+                                        android:layout_width="344dp"
+                                        android:layout_height="341dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+                        </ScrollView>
 
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
