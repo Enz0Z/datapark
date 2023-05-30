@@ -1,13 +1,18 @@
 package me.datapark;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
@@ -16,6 +21,9 @@ import models.Car;
 public class UserActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
     public ListView miLista;
     public ArrayList<Car> items;
+    private DrawerLayout drawerLayout;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,16 +34,20 @@ public class UserActivity extends AppCompatActivity implements AdapterView.OnIte
         items.add(new Car("Citroen","Rodolfo","0000003X","Gasolina"));
         items.add(new Car("Citroen","Ferrari","0000004X","Gasolina"));
 
-
         try{
             miLista = (ListView) findViewById(R.id.ListView);
             PersonalAdapter miAdapatador = new PersonalAdapter(this, R.layout.item_cars, items);
-            //puente entre contenedor y datos
             miLista.setAdapter(miAdapatador);
             miLista.setOnItemClickListener(this);
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override

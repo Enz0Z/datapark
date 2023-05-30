@@ -8,8 +8,14 @@
     <string name="pass">Password</string>
     <string name="keepMe">Keep me sign in</string>
     <string name="signin">Sign in</string>
-    <string name="registerhere">You have not an account yet? Register here</string>
+    <string name="registerhere">You have not an account yet? Register</string>
     <string name="forpass">Forget Pass?</string>
+
+    <!--REGISTER-->
+    <string name="register">REGISTER</string>
+    <string name="mail">Mail</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="allready">You already have an account? Sign in</string>
 
     <!--FORM-->
     <string name="cardata">Complete the fields about your vehicle</string>
@@ -32,7 +38,7 @@
     <string name="editMail">New Mail</string>
     <string name="update">Update</string>
     <string name="carManager">Vehicle Manager</string>
-    <string name="insertCar">Insert new vehicle</string>
+    <string name="insertCar">Insert New Vehicle</string>
 
     <!--ITEM-->
     <string name="itemModel">Modelo Vehiculo</string>

@@ -24,10 +24,12 @@
             android:gravity="center"
             android:text="@string/app_name"
             android:textColor="#ffff"
+            android:textSize="14dp"
+            android:clickable="true"
             android:textStyle="bold|italic"></TextView>
 
         <EditText
-            android:id="@+id/userFieldLogin"
+            android:id="@+id/userFieldRegister"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -41,7 +43,23 @@
             android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/passFieldLogIn"
+            android:id="@+id/editTextTextEmailAddressRegister"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:drawableLeft="@drawable/mailicon"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:ems="10"
+            android:hint="@string/mail"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp"
+            android:textColorHint="#BDBDBD"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/passFieldRegister"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -56,24 +74,30 @@
             android:textColorHint="#BDBDBD"
             android:textStyle="italic" />
 
-        <CheckBox
-            android:id="@+id/keepmesigned"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/confirmPasswordRegister"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
             android:layout_marginTop="10dp"
-            android:buttonTint="#FFFBF8"
-            android:text="@string/keepMe"
-            android:textColor="#ffff"
+            android:background="@drawable/btn"
+            android:drawableLeft="@drawable/securityicon"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:ems="10"
+            android:hint="@string/confirmPassword"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColorHint="#BDBDBD"
             android:textStyle="italic" />
 
         <Button
-            android:id="@+id/logButton"
+            android:id="@+id/regButtonRegister"
             android:layout_width="125dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btncolor"
             android:onClick="changeAct"
-            android:text="@string/signin"
+            android:text="@string/register"
             android:textStyle="bold|italic" />
 
         <View
@@ -87,21 +111,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:onClick="registerAct"
-            android:text="@string/registerhere"
-            android:textColor="#FFFBF8" />
-
-        <TextView
-            android:id="@+id/forgetPass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:onClick="forgotPassAct"
-            android:text="@string/forpass"
+            android:onClick="changeAct"
+            android:text="@string/allready"
             android:textColor="#FFFBF8"
-            android:textStyle="italic" />
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 

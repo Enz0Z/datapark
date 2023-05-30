@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/logimg"
-    android:backgroundTint="#49545E"
     android:backgroundTintMode="multiply"
     tools:context=".UserActivity">
 
@@ -16,6 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#CB212432"
             android:orientation="vertical" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -127,8 +127,12 @@
                                         android:layout_marginTop="10dp"
                                         android:background="@drawable/btn"
                                         android:hint="@string/editName"
+                                        android:drawableLeft="@drawable/usericon"
+                                        android:drawablePadding="10dp"
+                                        android:drawableTint="@color/white"
                                         android:paddingLeft="15dp"
                                         android:textColorHint="#BDBDBD"
+                                        android:textSize="14dp"
                                         android:textStyle="italic" />
 
                                     <EditText
@@ -138,8 +142,12 @@
                                         android:layout_marginTop="10dp"
                                         android:background="@drawable/btn"
                                         android:hint="@string/editMail"
+                                        android:drawableLeft="@drawable/mailicon"
+                                        android:drawablePadding="10dp"
+                                        android:drawableTint="@color/white"
                                         android:paddingLeft="15dp"
                                         android:textColorHint="#BDBDBD"
+                                        android:textSize="14dp"
                                         android:textStyle="italic" />
 
                                     <Button
@@ -174,12 +182,12 @@
 
                                     <Button
                                         android:id="@+id/insertCarButton"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
-                                        android:layout_weight="1"
                                         android:background="@drawable/btncolor"
                                         android:text="@string/insertCar"
+                                        android:textAllCaps="false"
                                         android:textStyle="bold|italic" />
 
                                 </LinearLayout>
@@ -193,7 +201,7 @@
                                     <ListView
                                         android:id="@+id/ListView"
                                         android:layout_width="344dp"
-                                        android:layout_height="341dp"
+                                        android:layout_height="wrap_content"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
