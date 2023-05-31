@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeAct(View view){
-            Intent intent = new Intent(this,TestMenu.class);
+            Intent intent = new Intent(this,UserActivity.class);
             startActivity(intent);
             Toast.makeText(this,"Perfil",Toast.LENGTH_LONG).show();
     }
