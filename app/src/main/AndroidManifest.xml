@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DataPark"
         tools:targetApi="31">
         <activity
+            android:name=".DGTActivity"
+            android:exported="false" />
+        <activity
             android:name=".TestMenu"
             android:exported="false">
             <meta-data
