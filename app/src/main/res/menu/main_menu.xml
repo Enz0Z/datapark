@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/homeMenu"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/home"/>
+    </group>
+    <item android:title="@string/profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/manageProfileMenu"
+                    android:icon="@drawable/ic_baseline_account_circle_24"
+                    android:title="@string/manage"/>
+                <item android:id="@+id/defaultCarHistoryMenu"
+                    android:icon="@drawable/ic_baseline_account_circle_24"
+                    android:title="@string/history"/>
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/others">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/alarmsMenu"
+                    android:icon="@drawable/ic_baseline_account_circle_24"
+                    android:title="@string/reminder"/>
+                <item android:id="@+id/logOutMenu"
+                    android:icon="@drawable/ic_baseline_account_circle_24"
+                    android:title="@string/logout"/>
+            </group>
+        </menu>
+    </item>
+</menu>

@@ -1,3 +1,55 @@
 <resources>
+    <!--LOGIN-->
     <string name="app_name">DataPark</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="open">Open Nav</string>
+    <string name="close">Close Nav</string>
+    <string name="user">Username</string>
+    <string name="pass">Password</string>
+    <string name="keepMe">Keep me sign in</string>
+    <string name="signin">Sign in</string>
+    <string name="registerhere">You have not an account yet? Register</string>
+    <string name="forpass">Forget Pass?</string>
+
+    <!--REGISTER-->
+    <string name="register">REGISTER</string>
+    <string name="mail">Mail</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="allready">You already have an account? Sign in</string>
+
+    <!--FORM-->
+    <string name="cardata">Complete the fields about your vehicle</string>
+    <string name="model">Modelo</string>
+    <string name="brand">Marca</string>
+    <string name="plate">Matricula</string>
+    <string name="fuel">Tipo de carburante</string>
+    <string name="tanksize">Tamaño del tanque</string>
+    <string name="distance">Kilometraje actual</string>
+    <string name="horses">Potencia</string>
+    <string name="notes">Notas</string>
+    <string name="save">Save</string>
+    <string name="clean">Clear</string>
+
+    <!--PROFILE-->
+    <string name="sampleName">KIRBY MASCARPONE</string>
+    <string name="sampleMail">redonditoycuqui@soymonisimo.com</string>
+    <string name="profileSettings">Profile Settings</string>
+    <string name="editName">New Username</string>
+    <string name="editMail">New Mail</string>
+    <string name="update">Update</string>
+    <string name="carManager">Vehicle Manager</string>
+    <string name="insertCar">Insert New Vehicle</string>
+
+    <!--ITEM-->
+    <string name="itemModel">Modelo Vehiculo</string>
+    <string name="type">Coche/Moto</string>
+
+    <!--MENU-->
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="manage">Manage</string>
+    <string name="history">Historical</string>
+    <string name="others">Others</string>
+    <string name="reminder">Reminders</string>
+    <string name="logout">LogOut</string>
 </resources>
