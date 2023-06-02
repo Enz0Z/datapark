@@ -23,18 +23,19 @@ public class CameraInformationDialogFragment extends DialogFragment {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             ArrayList<String> message = new ArrayList<>();
 
-            message.add(getString(R.string.fecha) + " " + object.getString("fecha"));
-            message.add(getString(R.string.sentido) + " " + object.getString("sentido"));
-            message.add(getString(R.string.latitud) + " " + object.getString("latitud"));
-            message.add(getString(R.string.longitud) + " " + object.getString("longitud"));
-            message.add(getString(R.string.provincia) + " " + object.getString("provincia"));
+            message.add(getString(R.string.date) + " " + object.getString("fecha"));
+            message.add(getString(R.string.direction) + " " + object.getString("sentido"));
+            message.add(getString(R.string.latitude) + " " + object.getString("latitud"));
+            message.add(getString(R.string.longitude) + " " + object.getString("longitud"));
+            message.add(getString(R.string.province) + " " + object.getString("provincia"));
             message.add(getString(R.string.pk) + " " + object.getString("pk"));
 
             builder.setTitle(object.getString("carretera"));
             builder.setMessage(String.join("\n", message));
-            builder.setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("Close", new DialogInterface.OnClickListener() {
                 @Override
-                public void onClick(DialogInterface dialogInterface, int i) {}
+                public void onClick(DialogInterface dialogInterface, int i) {
+                }
             });
             return builder.create();
         } catch (Exception e) {

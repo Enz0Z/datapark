@@ -48,18 +48,17 @@
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="manage">Manage Profile</string>
-    <string name="newCar">New Vehicle Form</string>
-    <string name="others">Others</string>
-    <string name="dgtCam">DGT Cameras</string>
-    <string name="logout">LogOut</string>
-    <string name="hereUare">Here you are</string>
+    <string name="car_history">New Vehicle Form</string>
+    <string name="logout">Log Out</string>
+
     <!--DGT Cameras-->
+    <string name="dgt_cameras">DGT Cameras</string>
     <string name="dgt_cameras_url">https://www.dgt.es/.content/.assets/json/camaras.json</string>
     <string name="loading">Loading all DGT cameras in Madrid.</string>
-    <string name="fecha">Date:</string>
-    <string name="sentido">address:</string>
-    <string name="latitud">Latitude:</string>
-    <string name="longitud">Length:</string>
-    <string name="provincia">Province:</string>
-    <string name="pk">Kilometric point:</string>
+    <string name="date">Date:</string>
+    <string name="direction">Direction:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="province">Province:</string>
+    <string name="pk">PK:</string>
 </resources>

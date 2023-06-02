@@ -1,8 +1,5 @@
 package me.datapark;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,12 +10,15 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 
 import me.datapark.dgt_cameras.Activity;
 import models.Car;
 
-public class ProfileActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class ProfileActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView miLista;
     private ArrayList<Car> items;
@@ -32,24 +32,25 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
         insertCar = findViewById(R.id.insertCarButton);
         update = findViewById(R.id.updateProfile);
         items = new ArrayList<>();
-        items.add(new Car("Citroen","Test","0000001X","Gasolina"));
-        items.add(new Car("Citroen","C4","0000002X","Gasolina"));
-        items.add(new Car("Citroen","Rodolfo","0000003X","Gasolina"));
-        items.add(new Car("Citroen","Ferrari","0000004X","Gasolina"));
+        items.add(new Car("Citroen", "Test", "0000001X", "Gasolina"));
+        items.add(new Car("Citroen", "C4", "0000002X", "Gasolina"));
+        items.add(new Car("Citroen", "Rodolfo", "0000003X", "Gasolina"));
+        items.add(new Car("Citroen", "Ferrari", "0000004X", "Gasolina"));
 
-        try{
+        try {
             miLista = findViewById(R.id.ListView);
             PersonalAdapter miAdapatador = new PersonalAdapter(this, R.layout.item_cars, items);
             miLista.setAdapter(miAdapatador);
             miLista.setOnItemClickListener(this);
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     //TODO: BOTON UPDATE PARA ACTUALIZAR NOMBRE Y MAIL DESDE EL PERFIL
-    public void updateData(){}
+    public void updateData() {
+    }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -59,50 +60,42 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
     //CREACION DE MENU, SWITCH Y METODOS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu_profile,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.homeMenu:
-                Toast.makeText(ProfileActivity.this, R.string.home, Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.home_button:
                 goMap();
                 break;
-            case R.id.manageProfileMenu:
-                Toast.makeText(ProfileActivity.this, R.string.hereUare, Toast.LENGTH_SHORT).show();
+            case R.id.manage_profile:
                 break;
-            case R.id.defaultCarHistoryMenu:
-                Toast.makeText(ProfileActivity.this, R.string.newCar, Toast.LENGTH_SHORT).show();
+            case R.id.car_history:
                 goForm();
                 break;
-            case R.id.alarmsMenu:
-                Toast.makeText(ProfileActivity.this, R.string.dgtCam, Toast.LENGTH_SHORT).show();
+            case R.id.dgt_cameras:
                 goDGT();
                 break;
-            case R.id.logOutMenu:
-                Toast.makeText(ProfileActivity.this, R.string.logout, Toast.LENGTH_SHORT).show();
+            case R.id.log_out:
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void goForm(){
-        Intent intent = new Intent(this,FormActivity.class);
+    public void goForm() {
+        Intent intent = new Intent(this, FormActivity.class);
         startActivity(intent);
-        Toast.makeText(this,"Form",Toast.LENGTH_LONG).show();
     }
 
-    public void goDGT(){
+    public void goDGT() {
         Intent intent = new Intent(this, Activity.class);
         startActivity(intent);
-        Toast.makeText(this,"DGT",Toast.LENGTH_LONG).show();
     }
 
-    public void goMap(){
+    public void goMap() {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
-        Toast.makeText(this,"Mapa",Toast.LENGTH_LONG).show();
     }
 }

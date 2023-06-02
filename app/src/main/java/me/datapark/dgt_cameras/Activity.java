@@ -8,7 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -110,50 +109,42 @@ public class Activity extends AppCompatActivity {
     //CREACION DE MENU, SWITCH Y METODOS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu_profile,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.homeMenu:
-                Toast.makeText(Activity.this, R.string.home, Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.home_button:
                 goMap();
                 break;
-            case R.id.manageProfileMenu:
-                Toast.makeText(Activity.this, R.string.profile, Toast.LENGTH_SHORT).show();
+            case R.id.manage_profile:
                 goProfile();
                 break;
-            case R.id.defaultCarHistoryMenu:
-                Toast.makeText(Activity.this, R.string.newCar, Toast.LENGTH_SHORT).show();
+            case R.id.car_history:
                 goForm();
                 break;
-            case R.id.alarmsMenu:
-                Toast.makeText(Activity.this, R.string.hereUare, Toast.LENGTH_SHORT).show();
+            case R.id.dgt_cameras:
                 break;
-            case R.id.logOutMenu:
-                Toast.makeText(Activity.this, R.string.logout, Toast.LENGTH_SHORT).show();
+            case R.id.log_out:
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void goForm(){
+    public void goForm() {
         Intent intent = new Intent(this, FormActivity.class);
         startActivity(intent);
-        Toast.makeText(this,"Form",Toast.LENGTH_LONG).show();
     }
 
-    public void goProfile(){
-        Intent intent = new Intent(this,ProfileActivity.class);
+    public void goProfile() {
+        Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
-        Toast.makeText(this,"Profile",Toast.LENGTH_LONG).show();
     }
 
-    public void goMap(){
+    public void goMap() {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
-        Toast.makeText(this,"Mapa",Toast.LENGTH_LONG).show();
     }
 }

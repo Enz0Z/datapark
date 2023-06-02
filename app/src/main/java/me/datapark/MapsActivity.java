@@ -1,12 +1,11 @@
 package me.datapark;
 
-import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -56,34 +55,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu_profile,menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.homeMenu:
-                Toast.makeText(MapsActivity.this, "Home", Toast.LENGTH_SHORT).show();
+        switch (item.getItemId()) {
+            case R.id.home_button:
                 break;
 
-            case R.id.manageProfileMenu:
-                Toast.makeText(MapsActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+            case R.id.manage_profile:
                 break;
 
-            case R.id.defaultCarHistoryMenu:
-                Toast.makeText(MapsActivity.this, "History", Toast.LENGTH_SHORT).show();
+            case R.id.car_history:
                 break;
 
-            case R.id.alarmsMenu:
-                Toast.makeText(MapsActivity.this, "Alarms", Toast.LENGTH_SHORT).show();
+            case R.id.dgt_cameras:
                 break;
 
-            case R.id.logOutMenu:
-                Toast.makeText(MapsActivity.this, "LogOut", Toast.LENGTH_SHORT).show();
+            case R.id.log_out:
                 break;
             default:
-                Toast.makeText(this,"Se ha pulsado "+item.getTitle().toString(),Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

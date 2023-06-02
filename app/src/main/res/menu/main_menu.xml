@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_button"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/manage_profile"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/manage" />
+        <item
+            android:id="@+id/car_history"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/car_history" />
+        <item
+            android:id="@+id/dgt_cameras"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/dgt_cameras" />
+        <item
+            android:id="@+id/log_out"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/logout" />
+    </group>
+</menu>
