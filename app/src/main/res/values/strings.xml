@@ -52,4 +52,14 @@
     <string name="others">Others</string>
     <string name="reminder">Reminders</string>
     <string name="logout">LogOut</string>
+
+    <!--DGT Cameras-->
+    <string name="dgt_cameras_url">https://www.dgt.es/.content/.assets/json/camaras.json</string>
+    <string name="loading">Cargando todas las cámaras de la DGT en Madrid.</string>
+    <string name="fecha">Últ. act.:</string>
+    <string name="sentido">Sentido:</string>
+    <string name="latitud">Latitud:</string>
+    <string name="longitud">Longitud:</string>
+    <string name="provincia">Provincia:</string>
+    <string name="pk">Punto kilométrico:</string>
 </resources>
