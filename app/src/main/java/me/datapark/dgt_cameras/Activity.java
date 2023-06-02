@@ -1,11 +1,16 @@
 package me.datapark.dgt_cameras;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -20,6 +25,9 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 import cz.msebera.android.httpclient.Header;
+import me.datapark.FormActivity;
+import me.datapark.MapsActivity;
+import me.datapark.ProfileActivity;
 import me.datapark.R;
 
 public class Activity extends AppCompatActivity {
@@ -97,5 +105,55 @@ public class Activity extends AppCompatActivity {
             public void onRetry(int retryNo) {
             }
         });
+    }
+
+    //CREACION DE MENU, SWITCH Y METODOS
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu_profile,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.homeMenu:
+                Toast.makeText(Activity.this, R.string.home, Toast.LENGTH_SHORT).show();
+                goMap();
+                break;
+            case R.id.manageProfileMenu:
+                Toast.makeText(Activity.this, R.string.profile, Toast.LENGTH_SHORT).show();
+                goProfile();
+                break;
+            case R.id.defaultCarHistoryMenu:
+                Toast.makeText(Activity.this, R.string.newCar, Toast.LENGTH_SHORT).show();
+                goForm();
+                break;
+            case R.id.alarmsMenu:
+                Toast.makeText(Activity.this, R.string.hereUare, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.logOutMenu:
+                Toast.makeText(Activity.this, R.string.logout, Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void goForm(){
+        Intent intent = new Intent(this, FormActivity.class);
+        startActivity(intent);
+        Toast.makeText(this,"Form",Toast.LENGTH_LONG).show();
+    }
+
+    public void goProfile(){
+        Intent intent = new Intent(this,ProfileActivity.class);
+        startActivity(intent);
+        Toast.makeText(this,"Profile",Toast.LENGTH_LONG).show();
+    }
+
+    public void goMap(){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+        Toast.makeText(this,"Mapa",Toast.LENGTH_LONG).show();
     }
 }

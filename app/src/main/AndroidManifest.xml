@@ -15,15 +15,15 @@
         android:theme="@style/Theme.DataPark"
         tools:targetApi="31">
         <activity
-            android:name=".dgt_cameras.Activity"
-            android:exported="false" />
-        <activity
-            android:name=".TestMenu"
+            android:name=".ProfileActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".dgt_cameras.Activity"
+            android:exported="false" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false">

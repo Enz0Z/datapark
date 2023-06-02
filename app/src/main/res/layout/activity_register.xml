@@ -96,7 +96,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btncolor"
-            android:onClick="changeAct"
+            android:onClick="goMap"
             android:text="@string/register"
             android:textStyle="bold|italic" />
 
@@ -111,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:onClick="changeAct"
+            android:onClick="goMap"
             android:text="@string/allready"
             android:textColor="#FFFBF8"
             tools:ignore="TouchTargetSizeCheck" />

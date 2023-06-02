@@ -72,7 +72,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btncolor"
-            android:onClick="changeAct"
+            android:onClick="goProfile"
             android:text="@string/signin"
             android:textStyle="bold|italic" />
 
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:clickable="true"
-            android:onClick="registerAct"
+            android:onClick="goRegister"
             android:text="@string/registerhere"
             android:textColor="#FFFBF8" />
 
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:clickable="true"
-            android:onClick="forgotPassAct"
+            android:onClick="goRememberPass"
             android:text="@string/forpass"
             android:textColor="#FFFBF8"
             android:textStyle="italic" />

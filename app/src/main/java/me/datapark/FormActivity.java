@@ -1,81 +1,78 @@
 package me.datapark;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.android.material.navigation.NavigationView;
+import me.datapark.dgt_cameras.Activity;
 
 public class FormActivity extends AppCompatActivity {
 
-    private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
-    private ActionBarDrawerToggle drawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
-
-        //Menu parameters
-        drawerLayout = findViewById(R.id.drawer_layout_form);
-        navigationView = findViewById(R.id.nav_view_form);
-        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open,R.string.close);
-        menuImplementation();
     }
 
-    public void menuImplementation(){
-        drawerLayout.addDrawerListener(drawerToggle);
-        drawerToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.homeMenu:{
-                        Toast.makeText(FormActivity.this, "Home", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.manageProfileMenu:{
-                        Toast.makeText(FormActivity.this, "Profile", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.defaultCarHistoryMenu:{
-                        Toast.makeText(FormActivity.this, "History", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.alarmsMenu:{
-                        Toast.makeText(FormActivity.this, "Alarms", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                    case R.id.logOutMenu:{
-                        Toast.makeText(FormActivity.this, "LogOut", Toast.LENGTH_SHORT).show();
-                        break;
-                    }
-                }
-                return false;
-            }
-        });
-    }
+    //TODO: METODOS DE LOS BOTONES PARA ENLAZAR CON LA BBDD (SAVE) Y LIMPIAR LOS EDITTEXT (CLEAR)
+    public void clear(){}
+    public void save(){}
+
+    //CREACION DE MENU, SWITCH Y METODOS
     @Override
-    public void onBackPressed() {
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }else{
-            super.onBackPressed();
-        }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu_profile,menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(drawerToggle.onOptionsItemSelected(item)){
-            return true;
+        switch (item.getItemId()){
+            case R.id.homeMenu:
+                Toast.makeText(FormActivity.this, R.string.home, Toast.LENGTH_SHORT).show();
+                goMap();
+                break;
+            case R.id.manageProfileMenu:
+                Toast.makeText(FormActivity.this, R.string.profile, Toast.LENGTH_SHORT).show();
+                goProfile();
+                break;
+            case R.id.defaultCarHistoryMenu:
+                Toast.makeText(FormActivity.this, R.string.hereUare, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.alarmsMenu:
+                Toast.makeText(FormActivity.this, R.string.dgtCam, Toast.LENGTH_SHORT).show();
+                goDGT();
+                break;
+            case R.id.logOutMenu:
+                Toast.makeText(FormActivity.this, R.string.logout, Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
+
+    // PILA DE METODOS PARA EL MENU
+    public void goProfile(){
+        Intent intent = new Intent(this,ProfileActivity.class);
+        startActivity(intent);
+        Toast.makeText(this,"Profile",Toast.LENGTH_LONG).show();
+    }
+
+    //TODO: ENZO, NO SE POR QUE NO ME FUFA ESTE SI PUEDES MIRATELO XD
+    public void goMap(){
+        Intent intent = new Intent(this,MapsActivity.class);
+        startActivity(intent);
+        Toast.makeText(this,"Mapa",Toast.LENGTH_LONG).show();
+    }
+
+    public void goDGT(){
+        Intent intent = new Intent(this, Activity.class);
+        startActivity(intent);
+        Toast.makeText(this,"DGT",Toast.LENGTH_LONG).show();
+    }
+
 }

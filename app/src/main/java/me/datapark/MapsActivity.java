@@ -1,8 +1,12 @@
 package me.datapark;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -48,5 +52,39 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu_profile,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.homeMenu:
+                Toast.makeText(MapsActivity.this, "Home", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.manageProfileMenu:
+                Toast.makeText(MapsActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.defaultCarHistoryMenu:
+                Toast.makeText(MapsActivity.this, "History", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.alarmsMenu:
+                Toast.makeText(MapsActivity.this, "Alarms", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.logOutMenu:
+                Toast.makeText(MapsActivity.this, "LogOut", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                Toast.makeText(this,"Se ha pulsado "+item.getTitle().toString(),Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

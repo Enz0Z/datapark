@@ -13,7 +13,7 @@
                     android:title="@string/manage"/>
                 <item android:id="@+id/defaultCarHistoryMenu"
                     android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="@string/history"/>
+                    android:title="@string/newCar"/>
             </group>
         </menu>
     </item>
@@ -22,7 +22,7 @@
             <group android:checkableBehavior="single">
                 <item android:id="@+id/alarmsMenu"
                     android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="@string/reminder"/>
+                    android:title="@string/dgtCam"/>
                 <item android:id="@+id/logOutMenu"
                     android:icon="@drawable/ic_baseline_account_circle_24"
                     android:title="@string/logout"/>
