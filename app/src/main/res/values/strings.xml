@@ -19,14 +19,14 @@
 
     <!--FORM-->
     <string name="cardata">Complete the fields about your vehicle</string>
-    <string name="model">Modelo</string>
-    <string name="brand">Marca</string>
-    <string name="plate">Matricula</string>
-    <string name="fuel">Tipo de carburante</string>
-    <string name="tanksize">Tamaño del tanque</string>
-    <string name="distance">Kilometraje actual</string>
-    <string name="horses">Potencia</string>
-    <string name="notes">Notas</string>
+    <string name="model">Model</string>
+    <string name="brand">Brand</string>
+    <string name="plate">Plate</string>
+    <string name="fuel">Fuel</string>
+    <string name="tanksize">Tank Size</string>
+    <string name="distance">Distance</string>
+    <string name="horses">Horses</string>
+    <string name="notes">Note</string>
     <string name="save">Save</string>
     <string name="clean">Clear</string>
 
@@ -41,25 +41,28 @@
     <string name="insertCar">Insert New Vehicle</string>
 
     <!--ITEM-->
-    <string name="itemModel">Modelo Vehiculo</string>
-    <string name="type">Coche/Moto</string>
+    <string name="itemModel">Vehicle Model</string>
+    <string name="type">Car/Motorbike</string>
 
     <!--MENU-->
     <string name="home">Home</string>
     <string name="profile">Profile</string>
-    <string name="manage">Manage</string>
-    <string name="history">Historical</string>
-    <string name="others">Others</string>
-    <string name="reminder">Reminders</string>
-    <string name="logout">LogOut</string>
+    <string name="manage">Manage Profile</string>
+    <string name="car_history">New Vehicle Form</string>
+    <string name="logout">Log Out</string>
+    
+    <!--Gas Stations-->
+    <string name="gas_stations">Gasolineras</string>
+
 
     <!--DGT Cameras-->
+    <string name="dgt_cameras">DGT Cameras</string>
     <string name="dgt_cameras_url">https://www.dgt.es/.content/.assets/json/camaras.json</string>
-    <string name="loading">Cargando todas las cámaras de la DGT en Madrid.</string>
-    <string name="fecha">Últ. act.:</string>
-    <string name="sentido">Sentido:</string>
-    <string name="latitud">Latitud:</string>
-    <string name="longitud">Longitud:</string>
-    <string name="provincia">Provincia:</string>
-    <string name="pk">Punto kilométrico:</string>
+    <string name="loading">Loading all DGT cameras in Madrid.</string>
+    <string name="date">Date:</string>
+    <string name="direction">Direction:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="province">Province:</string>
+    <string name="pk">PK:</string>
 </resources>

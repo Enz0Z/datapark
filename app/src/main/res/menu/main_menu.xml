@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
-        <item android:id="@+id/homeMenu"
+        <item
+            android:id="@+id/home_button"
+            android:checkable="false"
             android:icon="@drawable/ic_baseline_account_circle_24"
-            android:title="@string/home"/>
+            android:title="@string/home" />
+        <item
+            android:id="@+id/manage_profile"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/manage" />
+        <item
+            android:id="@+id/car_history"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/car_history" />
+        <item
+            android:id="@+id/gas_stations"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/gas_stations" />
+        <item
+            android:id="@+id/dgt_cameras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/dgt_cameras" />
+        <item
+            android:id="@+id/log_out"
+            android:checkable="false"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/logout" />
     </group>
-    <item android:title="@string/profile">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item android:id="@+id/manageProfileMenu"
-                    android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="@string/manage"/>
-                <item android:id="@+id/defaultCarHistoryMenu"
-                    android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="@string/history"/>
-            </group>
-        </menu>
-    </item>
-    <item android:title="@string/others">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item android:id="@+id/alarmsMenu"
-                    android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="@string/reminder"/>
-                <item android:id="@+id/logOutMenu"
-                    android:icon="@drawable/ic_baseline_account_circle_24"
-                    android:title="@string/logout"/>
-            </group>
-        </menu>
-    </item>
 </menu>

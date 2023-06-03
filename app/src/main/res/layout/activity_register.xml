@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,18 +14,6 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10dp">
-
-        <TextView
-            android:layout_width="156dp"
-            android:layout_height="153dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/circle"
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textColor="#ffff"
-            android:textSize="14dp"
-            android:clickable="true"
-            android:textStyle="bold|italic"></TextView>
 
         <EditText
             android:id="@+id/userFieldRegister"
@@ -96,7 +83,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btncolor"
-            android:onClick="changeAct"
+            android:onClick="goMap"
             android:text="@string/register"
             android:textStyle="bold|italic" />
 
@@ -107,11 +94,11 @@
             android:background="#3fff" />
 
         <TextView
-            android:id="@+id/registerHere"
+            android:id="@+id/register_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:onClick="changeAct"
+            android:onClick="goMap"
             android:text="@string/allready"
             android:textColor="#FFFBF8"
             tools:ignore="TouchTargetSizeCheck" />

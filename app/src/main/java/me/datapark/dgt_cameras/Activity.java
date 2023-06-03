@@ -3,9 +3,12 @@ package me.datapark.dgt_cameras;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -21,6 +24,7 @@ import java.nio.charset.StandardCharsets;
 
 import cz.msebera.android.httpclient.Header;
 import me.datapark.R;
+import me.datapark.utils.MainMenu;
 
 public class Activity extends AppCompatActivity {
 
@@ -97,5 +101,18 @@ public class Activity extends AppCompatActivity {
             public void onRetry(int retryNo) {
             }
         });
+    }
+
+    //CREACION DE MENU, SWITCH Y METODOS
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        MainMenu.onOptionsItemSelected(this, item);
+        return super.onOptionsItemSelected(item);
     }
 }
