@@ -2,11 +2,8 @@
     <!--LOGIN-->
     <string name="app_name">DataPark</string>
     <string name="title_activity_maps">MapsActivity</string>
-    <string name="open">Open Nav</string>
-    <string name="close">Close Nav</string>
-    <string name="user">Username</string>
-    <string name="pass">Password</string>
-    <string name="keepMe">Keep me sign in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
     <string name="signin">Sign in</string>
     <string name="register_account">Create an account now!</string>
     <string name="forgot_password">Forgot password?</string>
@@ -14,11 +11,11 @@
     <!--REGISTER-->
     <string name="register">REGISTER</string>
     <string name="mail">Mail</string>
-    <string name="confirmPassword">Confirm Password</string>
-    <string name="allready">You already have an account? Sign in</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="have_an_account">You already have an account? Sign in</string>
 
     <!--FORM-->
-    <string name="cardata">Complete the fields about your vehicle</string>
+    <string name="complete_all_fields">Complete the fields about your vehicle</string>
     <string name="model">Model</string>
     <string name="brand">Brand</string>
     <string name="plate">Plate</string>
@@ -37,11 +34,10 @@
     <string name="editName">New Username</string>
     <string name="editMail">New Mail</string>
     <string name="update">Update</string>
-    <string name="carManager">Vehicle Manager</string>
 
     <!--ITEM-->
-    <string name="itemModel">Vehicle Model</string>
-    <string name="type">Car/Motorbike</string>
+    <string name="slot_1">Slot 1</string>
+    <string name="slot_2">Slot 2</string>
 
     <!--Main Menu-->
     <string name="profile">Profile</string>

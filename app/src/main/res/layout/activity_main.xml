@@ -24,7 +24,7 @@
             android:drawableLeft="@drawable/usericon"
             android:drawablePadding="10dp"
             android:drawableTint="@color/white"
-            android:hint="@string/user"
+            android:hint="@string/username"
             android:paddingLeft="15dp"
             android:textColorHint="#BDBDBD"
             android:textStyle="italic" />
@@ -39,7 +39,7 @@
             android:drawablePadding="10dp"
             android:drawableTint="@color/white"
             android:ems="10"
-            android:hint="@string/pass"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:paddingLeft="15dp"
             android:textColorHint="#BDBDBD"
