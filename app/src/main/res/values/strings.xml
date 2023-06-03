@@ -50,15 +50,17 @@
     <string name="manage">Manage Profile</string>
     <string name="car_history">New Vehicle Form</string>
     <string name="logout">Log Out</string>
-    
+
+    <string name="loading">Loading...</string>
+
     <!--Gas Stations-->
-    <string name="gas_stations">Gasolineras</string>
+    <string name="gas_stations">Gas Stations</string>
+    <string name="gas_stations_url">https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/</string>
 
 
     <!--DGT Cameras-->
     <string name="dgt_cameras">DGT Cameras</string>
     <string name="dgt_cameras_url">https://www.dgt.es/.content/.assets/json/camaras.json</string>
-    <string name="loading">Loading all DGT cameras in Madrid.</string>
     <string name="date">Date:</string>
     <string name="direction">Direction:</string>
     <string name="latitude">Latitude:</string>
