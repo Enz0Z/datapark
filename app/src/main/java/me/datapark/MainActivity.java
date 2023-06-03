@@ -8,7 +8,10 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import me.datapark.profile.Activity;
+import me.datapark.profile.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,24 +25,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goMap(View view) {
-        Intent intent = new Intent(this, me.datapark.gas_station.Activity.class);
+        Intent intent = new Intent(this, GasStationsActivity.class);
         startActivity(intent);
     }
 
     // TODO: Cambiar metodo ventana principal a goMap
-    public void goProfile(View view) {
+    public void login(View view) {
         Intent intent = new Intent(this, Activity.class);
         startActivity(intent);
     }
 
-    public void goRegister(View view) {
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
+    public void register(View view) {
+        startActivity(new Intent(this, RegisterActivity.class));
     }
 
-    public void goRememberPass(View view) {
-        Intent intent = new Intent(this, RegisterActivity.class);
-        startActivity(intent);
+    public void forgotPassword(View view) {
+        Snackbar.make(view, "Not implemented yet.", Snackbar.LENGTH_LONG).show();
     }
-
 }

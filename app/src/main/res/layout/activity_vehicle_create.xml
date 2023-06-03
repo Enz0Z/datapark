@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/cardata"
+            android:text="@string/complete_all_fields"
             android:textColor="#ffff"
             android:textSize="16sp"
             android:textStyle="bold|italic" />

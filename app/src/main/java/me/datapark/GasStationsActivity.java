@@ -1,4 +1,4 @@
-package me.datapark.gas_station;
+package me.datapark;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -26,10 +26,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
-import me.datapark.R;
+import me.datapark.utils.InformationDialogFragment;
 import me.datapark.utils.MainMenu;
 
-public class Activity extends AppCompatActivity {
+public class GasStationsActivity extends AppCompatActivity {
 
     public static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -64,36 +64,36 @@ public class Activity extends AppCompatActivity {
                         JSONObject station = stations.getJSONObject(i);
 
                         if (!station.getString("Provincia").equals("MADRID")) continue;
-                        ArrayList<String> message = new ArrayList<>();
+                        ArrayList<String> messages = new ArrayList<>();
 
                         if (!station.getString("Precio Biodiesel").equals(""))
-                            message.add("Biodiesel" + "\n    €" + station.getString("Precio Biodiesel").replace(",", ".") + "/L");
+                            messages.add("Biodiesel" + "\n    €" + station.getString("Precio Biodiesel").replace(",", ".") + "/L");
                         if (!station.getString("Precio Bioetanol").equals(""))
-                            message.add("Bioetanol" + "\n    €" + station.getString("Precio Bioetanol").replace(",", ".") + "/L");
+                            messages.add("Bioetanol" + "\n    €" + station.getString("Precio Bioetanol").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gas Natural Comprimido").equals(""))
-                            message.add("Gas Natural Comprimido" + "\n    €" + station.getString("Precio Gas Natural Comprimido").replace(",", ".") + "/L");
+                            messages.add("Gas Natural Comprimido" + "\n    €" + station.getString("Precio Gas Natural Comprimido").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gas Natural Licuado").equals(""))
-                            message.add("Gas Natural Licuado" + "\n    €" + station.getString("Precio Gas Natural Licuado").replace(",", ".") + "/L");
+                            messages.add("Gas Natural Licuado" + "\n    €" + station.getString("Precio Gas Natural Licuado").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gases licuados del petróleo").equals(""))
-                            message.add("Gases licuados del petróleo" + "\n    €" + station.getString("Precio Gases licuados del petróleo").replace(",", ".") + "/L");
+                            messages.add("Gases licuados del petróleo" + "\n    €" + station.getString("Precio Gases licuados del petróleo").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasoleo A").equals(""))
-                            message.add("Gasoleo A" + "\n    €" + station.getString("Precio Gasoleo A").replace(",", ".") + "/L");
+                            messages.add("Gasoleo A" + "\n    €" + station.getString("Precio Gasoleo A").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasoleo B").equals(""))
-                            message.add("Gasoleo B" + "\n    €" + station.getString("Precio Gasoleo B").replace(",", ".") + "/L");
+                            messages.add("Gasoleo B" + "\n    €" + station.getString("Precio Gasoleo B").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasoleo Premium").equals(""))
-                            message.add("Gasoleo Premium" + "\n    €" + station.getString("Precio Gasoleo Premium").replace(",", ".") + "/L");
+                            messages.add("Gasoleo Premium" + "\n    €" + station.getString("Precio Gasoleo Premium").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasolina 95 E10").equals(""))
-                            message.add("Gasolina 95 E10" + "\n    €" + station.getString("Precio Gasolina 95 E10").replace(",", ".") + "/L");
+                            messages.add("Gasolina 95 E10" + "\n    €" + station.getString("Precio Gasolina 95 E10").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasolina 95 E5").equals(""))
-                            message.add("Gasolina 95 E5" + "\n    €" + station.getString("Precio Gasolina 95 E5").replace(",", ".") + "/L");
+                            messages.add("Gasolina 95 E5" + "\n    €" + station.getString("Precio Gasolina 95 E5").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasolina 95 E5 Premium").equals(""))
-                            message.add("Gasolina 95 E5 Premium" + "\n    €" + station.getString("Precio Gasolina 95 E5 Premium").replace(",", ".") + "/L");
+                            messages.add("Gasolina 95 E5 Premium" + "\n    €" + station.getString("Precio Gasolina 95 E5 Premium").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasolina 98 E10").equals(""))
-                            message.add("Gasolina 98 E10" + "\n    €" + station.getString("Precio Gasolina 98 E10").replace(",", ".") + "/L");
+                            messages.add("Gasolina 98 E10" + "\n    €" + station.getString("Precio Gasolina 98 E10").replace(",", ".") + "/L");
                         if (!station.getString("Precio Gasolina 98 E5").equals(""))
-                            message.add("Gasolina 98 E5" + "\n    €" + station.getString("Precio Gasolina 98 E5").replace(",", ".") + "/L");
+                            messages.add("Gasolina 98 E5" + "\n    €" + station.getString("Precio Gasolina 98 E5").replace(",", ".") + "/L");
                         if (!station.getString("Precio Hidrogeno").equals(""))
-                            message.add("Hidrogeno" + "\n    €" + station.getString("Precio Hidrogeno").replace(",", ".") + "/L");
+                            messages.add("Hidrogeno" + "\n    €" + station.getString("Precio Hidrogeno").replace(",", ".") + "/L");
 
                         GeoPoint point = new GeoPoint(
                                 Double.parseDouble(station.getString("Latitud").replace(",", ".")),
@@ -101,7 +101,7 @@ public class Activity extends AppCompatActivity {
                         );
                         OverlayItem overlayItem = new OverlayItem(
                                 station.getString("Dirección"),
-                                String.join("\n\n", message),
+                                String.join("\n\n", messages),
                                 point
                         );
 
@@ -110,11 +110,7 @@ public class Activity extends AppCompatActivity {
                     ItemizedIconOverlay<OverlayItem> itemizedIconOverlay = new ItemizedIconOverlay<>(items, new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
                         @Override
                         public boolean onItemSingleTapUp(int index, OverlayItem item) {
-                            StationInformationDialogFragment fragment = new StationInformationDialogFragment();
-                            fragment.title = item.getTitle();
-                            fragment.snippet = item.getSnippet();
-
-                            fragment.show(getSupportFragmentManager(), "station");
+                            new InformationDialogFragment(item.getTitle(), item.getSnippet()).show(getSupportFragmentManager(), "station");
                             return true;
                         }
 
