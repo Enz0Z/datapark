@@ -1,15 +1,15 @@
-package models;
+package me.datapark.profile;
 
 import java.io.Serializable;
 
-public class Car implements Serializable {
+public class Vehicle implements Serializable {
 
     private String marca;
     private String modelo;
     private String matricula;
     private String tipoTanque;
 
-    public Car(String marca, String modelo, String matricula, String tipoTanque) {
+    public Vehicle(String marca, String modelo, String matricula, String tipoTanque) {
         this.marca = marca;
         this.modelo = modelo;
         this.matricula = matricula;

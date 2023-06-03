@@ -18,12 +18,11 @@ import java.util.ArrayList;
 
 import me.datapark.R;
 import me.datapark.utils.MainMenu;
-import models.Car;
 
 public class ProfileActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView miLista;
-    private ArrayList<Car> items;
+    private ArrayList<Vehicle> items;
     private Button insertCar, update;
     TextView nickname, nicknameMail;
     private EditText name, mail;
@@ -40,23 +39,24 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
         name = findViewById(R.id.editNameProfileField);
         mail = findViewById(R.id.editMailProfileField);
         items = new ArrayList<>();
-        items.add(new Car("Citroen", "Test", "0000001X", "Gasolina"));
-        items.add(new Car("Citroen", "C4", "0000002X", "Gasolina"));
+        items.add(new Vehicle("Citroen", "Test", "0000001X", "Gasolina"));
+        items.add(new Vehicle("Citroen", "C4", "0000002X", "Gasolina"));
 
 
         //LISTVIW
         miLista = findViewById(R.id.ListView);
-        PersonalAdapter miAdapatador = new PersonalAdapter(this, R.layout.item_cars, items);
+        VehicleAdapter miAdapatador = new VehicleAdapter(this, R.layout.item_cars, items);
         miLista.setAdapter(miAdapatador);
         miLista.setOnItemClickListener(this);
 
     }
+
     public void updateData(View view) {
-        if(name.getText().length()!=0 && mail.getText().length()!=0){
+        if (name.getText().length() != 0 && mail.getText().length() != 0) {
             nickname.setText(name.getText());
             nicknameMail.setText(mail.getText());
-        }else{
-            Toast.makeText(this, "Empty fields",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Empty fields", Toast.LENGTH_SHORT).show();
         }
     }
 
