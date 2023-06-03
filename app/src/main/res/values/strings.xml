@@ -26,7 +26,7 @@
     <string name="tanksize">Tank Size</string>
     <string name="distance">Distance</string>
     <string name="power">Power</string>
-    <string name="notes">Note</string>
+    <string name="notes">Notes</string>
     <string name="save">Save</string>
     <string name="clean">Clear</string>
 
@@ -38,25 +38,20 @@
     <string name="editMail">New Mail</string>
     <string name="update">Update</string>
     <string name="carManager">Vehicle Manager</string>
-    <string name="insertCar">Insert New Vehicle</string>
 
     <!--ITEM-->
     <string name="itemModel">Vehicle Model</string>
     <string name="type">Car/Motorbike</string>
 
-    <!--MENU-->
-    <string name="home">Home</string>
+    <!--Main Menu-->
     <string name="profile">Profile</string>
-    <string name="manage">Manage Profile</string>
-    <string name="car_history">New Vehicle Form</string>
+    <string name="car_history">Create a new vehicle</string>
     <string name="logout">Log Out</string>
-
     <string name="loading">Loading...</string>
 
     <!--Gas Stations-->
     <string name="gas_stations">Gas Stations</string>
     <string name="gas_stations_url">https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/</string>
-
 
     <!--DGT Cameras-->
     <string name="dgt_cameras">DGT Cameras</string>
