@@ -4,47 +4,43 @@ import java.io.Serializable;
 
 public class Vehicle implements Serializable {
 
-    private String marca;
-    private String modelo;
-    private String matricula;
-    private String tipoTanque;
+    private final String plate;
+    private final String brand;
+    private final String model;
+    private final String fueltype;
+    private final String power;
+    private final String notes;
 
-    public Vehicle(String marca, String modelo, String matricula, String tipoTanque) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.matricula = matricula;
-        this.tipoTanque = tipoTanque;
+    public Vehicle(String plate, String brand, String model, String fueltype, String power, String notes) {
+        this.plate = plate;
+        this.brand = brand;
+        this.model = model;
+        this.fueltype = fueltype;
+        this.power = power;
+        this.notes = notes;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getPlate() {
+        return plate;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public String getBrand() {
+        return brand;
     }
 
-    public String getModelo() {
-        return modelo;
+    public String getModel() {
+        return model;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public String getFuelType() {
+        return fueltype;
     }
 
-    public String getMatricula() {
-        return matricula;
+    public String getPower() {
+        return power;
     }
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public String getTipoTanque() {
-        return tipoTanque;
-    }
-
-    public void setTipoTanque(String tipoTanque) {
-        this.tipoTanque = tipoTanque;
+    public String getNotes() {
+        return notes;
     }
 }

@@ -38,14 +38,13 @@ public class VehicleAdapter extends ArrayAdapter<Vehicle> {
     }
 
     private View createItem(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        LayoutInflater inflater = LayoutInflater.from(getContext());
-        View view = inflater.inflate(resource, parent, false);
-        TextView txtModel = view.findViewById(R.id.modelText);
-        TextView txtType = view.findViewById(R.id.cartype);
+        View view = LayoutInflater.from(getContext()).inflate(resource, parent, false);
+        TextView slot1 = view.findViewById(R.id.vehicle_slot1);
+        TextView slot2 = view.findViewById(R.id.vehicle_slot2);
+        Vehicle vehicle = vehicles.get(position);
 
-        txtModel.setText(vehicles.get(position).getModelo());
-        txtType.setText(vehicles.get(position).getTipoTanque());
+        slot1.setText(vehicle.getBrand() + " " + vehicle.getModel());
+        slot2.setText(vehicle.getPlate());
         return view;
     }
-
 }

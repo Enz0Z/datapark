@@ -4,10 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/logimg"
-    tools:context=".FormActivity">
+    tools:context=".profile.VehicleCreateActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#8D000000"
@@ -16,45 +15,16 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/carDataTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/cardata"
             android:textColor="#ffff"
             android:textSize="16sp"
-            android:textStyle="bold|italic"/>
+            android:textStyle="bold|italic" />
 
         <EditText
-            android:id="@+id/carModelField"
-            android:layout_width="300dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn"
-            android:hint="@string/model"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textColor="@color/white"
-            android:textColorHint="#BDBDBD"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <EditText
-            android:id="@+id/brandField"
-            android:layout_width="300dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn"
-            android:hint="@string/brand"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textColor="@color/white"
-            android:textColorHint="#BDBDBD"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <EditText
-            android:id="@+id/plateField"
+            android:id="@+id/vehicle_plate"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -65,10 +35,41 @@
             android:textColor="@color/white"
             android:textColorHint="#BDBDBD"
             android:textSize="14sp"
+            android:inputType="text|textCapWords"
             android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/fuelTypeField"
+            android:id="@+id/vehicle_brand"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="@string/brand"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="#BDBDBD"
+            android:textSize="14sp"
+            android:inputType="text|textCapWords"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/vehicle_model"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:hint="@string/model"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="#BDBDBD"
+            android:textSize="14sp"
+            android:inputType="text|textCapWords"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/vehicle_fueltype"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -79,38 +80,11 @@
             android:textColor="@color/white"
             android:textColorHint="#BDBDBD"
             android:textSize="14sp"
+            android:inputType="text|textCapWords"
             android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/fuelSizeField"
-            android:layout_width="300dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn"
-            android:hint="@string/tanksize"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textColor="@color/white"
-            android:textColorHint="#BDBDBD"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <EditText
-            android:id="@+id/distanceField"
-            android:layout_width="300dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn"
-            android:hint="@string/distance"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:textColor="@color/white"
-            android:textColorHint="#BDBDBD"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <EditText
-            android:id="@+id/powerField"
+            android:id="@+id/vehicle_power"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -121,15 +95,17 @@
             android:textColor="@color/white"
             android:textColorHint="#BDBDBD"
             android:textSize="14sp"
+            android:inputType="text|textCapWords"
             android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/descriptionField"
+            android:id="@+id/vehicle_notes"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btn"
             android:hint="@string/notes"
+            android:inputType="text|textCapWords"
             android:paddingStart="15dp"
             android:paddingEnd="15dp"
             android:textColor="@color/white"
@@ -138,15 +114,14 @@
             android:textStyle="italic" />
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
+            android:inputType="text|textCapWords"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/cleanButton"
                 android:layout_width="125dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="10dp"
@@ -160,7 +135,6 @@
                 tools:layout_editor_absoluteY="546dp" />
 
             <Button
-                android:id="@+id/saveButton"
                 android:layout_width="125dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="10dp"
