@@ -1,4 +1,4 @@
-package me.datapark;
+package me.datapark.profile;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,6 +14,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.datapark.R;
 import models.Car;
 
 public class PersonalAdapter extends ArrayAdapter<Car> {

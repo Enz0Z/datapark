@@ -14,7 +14,8 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
     }
 
-    public void changeAct(View view) {
+    public void goSignin(View view) {
+        //TODO: ENLACE BBDD
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
