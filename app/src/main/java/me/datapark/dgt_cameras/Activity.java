@@ -34,6 +34,7 @@ public class Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dgt_cameras);
+        setTitle(R.string.dgt_cameras);
         LinearLayout layout = findViewById(R.id.dgt_cameras_layout);
 
         client.get(getString(R.string.dgt_cameras_url), new AsyncHttpResponseHandler() {
