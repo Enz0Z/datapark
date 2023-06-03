@@ -6,7 +6,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.MenuItem;
 
+import me.datapark.FormActivity;
+import me.datapark.MainActivity;
 import me.datapark.R;
+import me.datapark.profile.ProfileActivity;
 
 public class MainMenu {
 
@@ -17,6 +20,15 @@ public class MainMenu {
                 break;
             case R.id.gas_stations:
                 startActivity(context, new Intent(context, me.datapark.gas_station.Activity.class), null);
+                break;
+            case R.id.manage_profile:
+                startActivity(context, new Intent(context, ProfileActivity.class), null);
+                break;
+            case R.id.form_menu:
+                startActivity(context, new Intent(context, FormActivity.class), null);
+                break;
+            case R.id.log_out:
+                startActivity(context, new Intent(context,MainActivity.class), null);
                 break;
         }
     }

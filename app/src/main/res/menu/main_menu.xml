@@ -2,17 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/home_button"
-            android:checkable="false"
-            android:icon="@drawable/ic_baseline_account_circle_24"
-            android:title="@string/home" />
-        <item
             android:id="@+id/manage_profile"
             android:checkable="false"
             android:icon="@drawable/ic_baseline_account_circle_24"
             android:title="@string/manage" />
         <item
-            android:id="@+id/car_history"
+            android:id="@+id/form_menu"
             android:checkable="false"
             android:icon="@drawable/ic_baseline_account_circle_24"
             android:title="@string/car_history" />

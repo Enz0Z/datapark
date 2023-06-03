@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import me.datapark.gas_station.Activity;
+import me.datapark.profile.ProfileActivity;
 
 public class MainActivity extends AppCompatActivity {
 
