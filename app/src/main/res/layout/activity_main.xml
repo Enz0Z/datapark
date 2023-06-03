@@ -51,7 +51,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btncolor"
-            android:onClick="goProfile"
+            android:onClick="login"
             android:text="@string/signin"
             android:textStyle="bold|italic" />
 
@@ -62,23 +62,21 @@
             android:background="#3fff" />
 
         <TextView
-            android:id="@+id/register_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:clickable="true"
-            android:onClick="goRegister"
-            android:text="@string/registerhere"
+            android:onClick="register"
+            android:text="@string/register_account"
             android:textColor="#FFFBF8" />
 
         <TextView
-            android:id="@+id/forget_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:clickable="true"
-            android:onClick="goRememberPass"
-            android:text="@string/forpass"
+            android:onClick="forgotPassword"
+            android:text="@string/forgot_password"
             android:textColor="#FFFBF8"
             android:textStyle="italic" />
 

@@ -8,8 +8,8 @@
     <string name="pass">Password</string>
     <string name="keepMe">Keep me sign in</string>
     <string name="signin">Sign in</string>
-    <string name="registerhere">You have not an account yet? Register</string>
-    <string name="forpass">Forget Pass?</string>
+    <string name="register_account">Create an account now!</string>
+    <string name="forgot_password">Forgot password?</string>
 
     <!--REGISTER-->
     <string name="register">REGISTER</string>

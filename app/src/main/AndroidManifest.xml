@@ -28,7 +28,7 @@
             android:name=".dgt_cameras.Activity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".profile.RegisterActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
