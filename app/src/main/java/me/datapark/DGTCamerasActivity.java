@@ -1,4 +1,4 @@
-package me.datapark.dgt_cameras;
+package me.datapark;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -21,12 +21,13 @@ import org.json.JSONObject;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
-import me.datapark.R;
+import me.datapark.utils.InformationDialogFragment;
 import me.datapark.utils.MainMenu;
 
-public class Activity extends AppCompatActivity {
+public class DGTCamerasActivity extends AppCompatActivity {
 
     public static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -57,10 +58,18 @@ public class Activity extends AppCompatActivity {
                         ImageButton button = new ImageButton(getApplicationContext());
 
                         button.setOnClickListener(click -> {
-                            CameraInformationDialogFragment fragment = new CameraInformationDialogFragment();
-                            fragment.object = camera;
+                            try {
+                                ArrayList<String> messages = new ArrayList<>();
 
-                            fragment.show(getSupportFragmentManager(), "camera");
+                                messages.add(getString(R.string.date) + " " + camera.getString("fecha"));
+                                messages.add(getString(R.string.direction) + " " + camera.getString("sentido"));
+                                messages.add(getString(R.string.latitude) + " " + camera.getString("latitud"));
+                                messages.add(getString(R.string.longitude) + " " + camera.getString("longitud"));
+                                messages.add(getString(R.string.province) + " " + camera.getString("provincia"));
+                                messages.add(getString(R.string.pk) + " " + camera.getString("pk"));
+                                new InformationDialogFragment(camera.getString("carretera"), messages).show(getSupportFragmentManager(), "camera");
+                            } catch (Exception e) {
+                            }
                         });
                         loadBipmapFromUrl(button, camera.getString("imagen"));
                         layout.addView(button);

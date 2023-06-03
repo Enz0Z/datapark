@@ -25,7 +25,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".dgt_cameras.Activity"
+            android:name=".DGTCamerasActivity"
             android:exported="false" />
         <activity
             android:name=".profile.RegisterActivity"
@@ -57,7 +57,7 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".gas_station.Activity"
+            android:name=".GasStationsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity

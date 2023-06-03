@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goMap(View view) {
-        Intent intent = new Intent(this, me.datapark.gas_station.Activity.class);
+        Intent intent = new Intent(this, GasStationsActivity.class);
         startActivity(intent);
     }
 
