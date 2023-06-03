@@ -1,6 +1,5 @@
 package me.datapark.dgt_cameras;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -24,10 +23,8 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 import cz.msebera.android.httpclient.Header;
-import me.datapark.FormActivity;
-import me.datapark.MapsActivity;
-import me.datapark.ProfileActivity;
 import me.datapark.R;
+import me.datapark.utils.MainMenu;
 
 public class Activity extends AppCompatActivity {
 
@@ -115,36 +112,7 @@ public class Activity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.home_button:
-                goMap();
-                break;
-            case R.id.manage_profile:
-                goProfile();
-                break;
-            case R.id.car_history:
-                goForm();
-                break;
-            case R.id.dgt_cameras:
-                break;
-            case R.id.log_out:
-                break;
-        }
+        MainMenu.onOptionsItemSelected(this, item);
         return super.onOptionsItemSelected(item);
-    }
-
-    public void goForm() {
-        Intent intent = new Intent(this, FormActivity.class);
-        startActivity(intent);
-    }
-
-    public void goProfile() {
-        Intent intent = new Intent(this, ProfileActivity.class);
-        startActivity(intent);
-    }
-
-    public void goMap() {
-        Intent intent = new Intent(this, MapsActivity.class);
-        startActivity(intent);
     }
 }

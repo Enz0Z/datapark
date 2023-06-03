@@ -50,6 +50,10 @@
     <string name="manage">Manage Profile</string>
     <string name="car_history">New Vehicle Form</string>
     <string name="logout">Log Out</string>
+    
+    <!--Gas Stations-->
+    <string name="gas_stations">Gasolineras</string>
+
 
     <!--DGT Cameras-->
     <string name="dgt_cameras">DGT Cameras</string>

@@ -1,6 +1,5 @@
 package me.datapark;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-import me.datapark.dgt_cameras.Activity;
+import me.datapark.utils.MainMenu;
 import models.Car;
 
 public class ProfileActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -57,7 +56,6 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
         Toast.makeText(this, "Se ha pulsado " + items.get(i), Toast.LENGTH_SHORT).show();
     }
 
-    //CREACION DE MENU, SWITCH Y METODOS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
@@ -66,36 +64,7 @@ public class ProfileActivity extends AppCompatActivity implements AdapterView.On
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.home_button:
-                goMap();
-                break;
-            case R.id.manage_profile:
-                break;
-            case R.id.car_history:
-                goForm();
-                break;
-            case R.id.dgt_cameras:
-                goDGT();
-                break;
-            case R.id.log_out:
-                break;
-        }
+        MainMenu.onOptionsItemSelected(this, item);
         return super.onOptionsItemSelected(item);
-    }
-
-    public void goForm() {
-        Intent intent = new Intent(this, FormActivity.class);
-        startActivity(intent);
-    }
-
-    public void goDGT() {
-        Intent intent = new Intent(this, Activity.class);
-        startActivity(intent);
-    }
-
-    public void goMap() {
-        Intent intent = new Intent(this, MapsActivity.class);
-        startActivity(intent);
     }
 }
