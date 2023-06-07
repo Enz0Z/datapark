@@ -46,12 +46,12 @@ public class VehicleCreateActivity extends AppCompatActivity {
 
         for (EditText edit : editTexts) {
             if (TextUtils.isEmpty(edit.getText().toString().trim())) {
-                Toast.makeText(this, "Fill in all the fields", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.fill_all_fields, Toast.LENGTH_LONG).show();
                 return;
             }
         }
 
-        MainActivity.db.execSQL("INSERT INTO vehicles VALUES (" +
+        MainActivity.DB.execSQL("INSERT INTO vehicles VALUES (" +
                 "'" + plate.getText().toString() + "'," +
                 "'" + brand.getText().toString() + "'," +
                 "'" + model.getText().toString() + "'," +

@@ -15,6 +15,7 @@
     <string name="have_an_account">You already have an account? Sign in</string>
 
     <!--FORM-->
+    <string name="fill_all_fields">Fill in all the fields</string>
     <string name="complete_all_fields">Complete the fields about your vehicle</string>
     <string name="model">Model</string>
     <string name="brand">Brand</string>
@@ -28,8 +29,6 @@
     <string name="clean">Clear</string>
 
     <!--PROFILE-->
-    <string name="sampleName">KIRBY MASCARPONE</string>
-    <string name="sampleMail">redonditoycuqui@soymonisimo.com</string>
     <string name="profileSettings">Profile Settings</string>
     <string name="editName">New Username</string>
     <string name="editMail">New Mail</string>
