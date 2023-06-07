@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,13 +24,8 @@ public class Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        MainActivity.db.execSQL("CREATE TABLE IF NOT EXISTS vehicles(" +
-                "plate VARCHAR," +
-                "brand VARCHAR," +
-                "model VARCHAR," +
-                "fuel VARCHAR," +
-                "power VARCHAR," +
-                "notes VARCHAR);");
+
+        ((TextView) findViewById(R.id.userProfile)).setText(MainActivity.Username);
     }
 
     @Override
@@ -53,7 +49,7 @@ public class Activity extends AppCompatActivity {
     public void refresh() {
         ListView list = findViewById(R.id.ListView);
         ArrayList<Vehicle> vehicles = new ArrayList<>();
-        Cursor cursor = MainActivity.db.rawQuery("SELECT * FROM vehicles", null);
+        Cursor cursor = MainActivity.DB.rawQuery("SELECT * FROM vehicles", null);
 
         if (cursor.moveToFirst()) {
             while (!cursor.isAfterLast()) {
@@ -74,7 +70,7 @@ public class Activity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                MainActivity.db.delete("vehicles", "plate = ?", new String[]{vehicles.get(i).getPlate()});
+                MainActivity.DB.delete("vehicles", "plate = ?", new String[]{vehicles.get(i).getPlate()});
                 refresh();
             }
         });
