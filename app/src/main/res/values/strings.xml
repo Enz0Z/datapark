@@ -29,7 +29,7 @@
     <string name="clean">Clear</string>
 
     <!--PROFILE-->
-    <string name="profileSettings">Profile Settings</string>
+    <string name="profileSettings">Vehicle List</string>
     <string name="editName">New Username</string>
     <string name="editMail">New Mail</string>
     <string name="update">Update</string>
