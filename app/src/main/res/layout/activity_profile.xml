@@ -70,18 +70,6 @@
                             app:layout_constraintStart_toStartOf="@+id/imageProfile"
                             app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
 
-                        <TextView
-                            android:id="@+id/mailProfile"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Email"
-                            android:textColor="#ffff"
-                            android:textSize="10dp"
-                            android:textStyle="italic"
-                            app:layout_constraintEnd_toEndOf="@+id/userProfile"
-                            app:layout_constraintStart_toStartOf="@+id/userProfile"
-                            app:layout_constraintTop_toBottomOf="@+id/userProfile" />
-
                         <LinearLayout
                             android:layout_width="352dp"
                             android:layout_height="421dp"
@@ -95,7 +83,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/mailProfile">
+                            app:layout_constraintTop_toBottomOf="@+id/userProfile">
 
                             <ScrollView
                                 android:layout_width="match_parent"
@@ -125,45 +113,6 @@
                                             app:layout_constraintStart_toStartOf="@+id/textView"
                                             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                                        <EditText
-                                            android:id="@+id/editNameProfileField"
-                                            android:layout_width="300dp"
-                                            android:layout_height="48dp"
-                                            android:layout_marginTop="10dp"
-                                            android:background="@drawable/btn"
-                                            android:hint="@string/editName"
-                                            android:drawableLeft="@drawable/usericon"
-                                            android:drawablePadding="10dp"
-                                            android:drawableTint="@color/white"
-                                            android:paddingLeft="15dp"
-                                            android:textColorHint="#BDBDBD"
-                                            android:textSize="14dp"
-                                            android:textStyle="italic" />
-
-                                        <EditText
-                                            android:id="@+id/editMailProfileField"
-                                            android:layout_width="300dp"
-                                            android:layout_height="48dp"
-                                            android:layout_marginTop="10dp"
-                                            android:background="@drawable/btn"
-                                            android:hint="@string/editMail"
-                                            android:drawableLeft="@drawable/mailicon"
-                                            android:drawablePadding="10dp"
-                                            android:drawableTint="@color/white"
-                                            android:paddingLeft="15dp"
-                                            android:textColorHint="#BDBDBD"
-                                            android:textSize="14dp"
-                                            android:textStyle="italic" />
-
-                                        <Button
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="10dp"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/btncolor"
-                                            android:text="@string/update"
-                                            android:textStyle="bold|italic" />
-
                                         <View
                                             android:layout_width="fill_parent"
                                             android:layout_height="2dp"
@@ -171,34 +120,25 @@
                                             android:layout_marginBottom="10dp"
                                             android:background="#3fff" />
 
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/listViewLayout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1">
+
+                                            <ListView
+                                                android:id="@+id/ListView"
+                                                android:layout_width="344dp"
+                                                android:layout_height="359dp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                                     </LinearLayout>
 
-                                    <ScrollView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
-
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical" />
-                                    </ScrollView>
-
-                                    <androidx.constraintlayout.widget.ConstraintLayout
-                                        android:id="@+id/listViewLayout"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_weight="1">
-
-                                        <ListView
-                                            android:id="@+id/ListView"
-                                            android:layout_width="344dp"
-                                            android:layout_height="wrap_content"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintTop_toTopOf="parent" />
-                                    </androidx.constraintlayout.widget.ConstraintLayout>
                                 </LinearLayout>
                             </ScrollView>
 
